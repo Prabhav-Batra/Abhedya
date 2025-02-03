@@ -1,6 +1,6 @@
 export const GridBg = ({ children }) => {
   return (
-    <div className="bg-[url('../../../public/frame-1-3.svg')] bg-repeat bg-[length:30px] min-h-screen w-full">
+    <div className="bg-[size:40px_40px] bg-[image:linear-gradient(to_right,#3c3c3c_2px,transparent_2px),linear-gradient(to_bottom,#3c3c3c_2px,#111_1px)] bg-repeat min-h-screen w-full ">
       {children}
     </div>
   );
