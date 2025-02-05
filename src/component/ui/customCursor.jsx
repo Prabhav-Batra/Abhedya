@@ -11,7 +11,7 @@ export default function Mask() {
       gsap.to(mask, {
         x: e.clientX,
         y: e.clientY,
-        duration: 3,
+        duration: 2,
         ease: "elastic.out(0.11,0.75)",
       });
     };
