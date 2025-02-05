@@ -1,4 +1,3 @@
-
 import "./App.css";
 import { GridBg } from "./component/ui/grid-bg";
 import { SignUp } from "./pages/signUp";
