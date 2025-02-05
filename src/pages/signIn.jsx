@@ -12,7 +12,6 @@ export const SignIn = () => {
         <div className="flex flex-col gap-3 mt-10">
           <Input type="text" placeholder="Email" />
           <Input type="password" placeholder="password" />
-          <Input type="password" placeholder="confirm password" />
         </div>
         <div className="mt-7 flex justify-between items-center">
           <Button
