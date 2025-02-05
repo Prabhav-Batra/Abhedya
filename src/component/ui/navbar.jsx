@@ -15,7 +15,7 @@ export const Navbar = () => {
             <div className="flex items-center gap-2 cursor-pointer">
               <div className="bg-orange-500 w-2 h-2 rounded-full"></div>
               <p className="text-[#f9f9f9] sm:text-lg text-base font-medium ">
-                LogIn
+                Log In
               </p>
             </div>
             <Button text="Sign Up" variant="main" />
