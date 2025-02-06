@@ -1,4 +1,4 @@
-import { Input } from "../component/ui/Input";
+import { Input } from "../../component";
 import { LinearGradientText } from "../component/ui/linearGradientText";
 import { Button } from "../component/ui/button";
 export const SignIn = () => {
@@ -8,7 +8,7 @@ export const SignIn = () => {
         <img />
       </div>
       <div className="bg-slate-50/20 w-full  rounded-xl py-8 px-10 backdrop-blur-[3px]">
-        <LinearGradientText text={"Sign Up"} />
+        <LinearGradientText text={"Sign In"} />
         <div className="flex flex-col gap-3 mt-10">
           <Input type="text" placeholder="Email" />
           <Input type="password" placeholder="password" />
