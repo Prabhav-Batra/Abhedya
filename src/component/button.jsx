@@ -12,10 +12,11 @@ const sizeStyles = {
 
 export const Button = ({ variant, text, size, endIcon }) => {
   return (
-    <button className={${variantStyles[variant]} ${sizeStyles[size]}}>
+    <button className={`${variantStyles[variant]} ${sizeStyles[size]}`}>
       <div className="flex gap-2 items-center">
         {text} {endIcon && <UpRightArrow />}
       </div>
     </button>
-  );
+  );
 };
+
