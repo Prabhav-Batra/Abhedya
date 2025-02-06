@@ -13,7 +13,7 @@ export const Button = ({ variant = "main", text }) => {
   const buttonRef = useRef(null);
   const setCustomCursorSize = useSetRecoilState(customCursorSizeAtom);
   const mouseHandlerEnter = () => {
-    setCustomCursorSize(10);
+    setCustomCursorSize(0);
     if (!buttonRef.current) return;
 
     gsap.to(buttonRef.current.querySelectorAll(".firstDiv span"), {
