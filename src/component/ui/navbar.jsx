@@ -13,8 +13,8 @@ export const Navbar = () => {
         <div>
           <div className="flex sm:gap-6 gap-4 items-center text-base">
             <div className="flex items-center gap-3 cursor-pointer">
-              <Button text="Log In" variant="main" />
-              <Button text="Sign Up" variant="blackBg" />
+              <Button text="Home" variant="main" />
+              <Button text="Logout" variant="blackBg" />
             </div>
           </div>
         </div>
