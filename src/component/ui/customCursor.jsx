@@ -12,8 +12,8 @@ export default function Mask() {
     gsap.to(mask, {
       width: `${customCursorSize}px`,
       height: `${customCursorSize}px`,
-      duration: 0.5,
-      ease: "circ.out",
+      duration: 0.6,
+      ease: "elastic.out(0.2,0.3)",
     });
     const handleMouseMove = (e) => {
       gsap.to(mask, {
