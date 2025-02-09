@@ -7,7 +7,7 @@ export const ProfilePage = ()=>{
   <div class="w-screen h-screen absolute z-10 ml-50px ">
     <img className="rounded-full w-50 h-50 mx-auto object-cover -mt-10 overflow-auto border-20 border-[#04281e] opacity-100 hover:scale-105 duration-300" id="box" src="https://4kwallpapers.com/images/wallpapers/minion-cartoon-blue-2880x1800-18723.jpg"/>
     <div class="flex justify-center items-center h-25"  >
-  <p class="text-5xl font-sans font-extrabold bg-gradient-to-b from-[#FFFFFF] to-[#0498AE] text-transparent bg-clip-text drop-shadow-[0_1px_0px_rgba(0,0,0,1)] hover:scale-105 duration-300" >PLAYER NAME</p>
+  <p class="text-5xl font-sans font-extrabold bg-gradient-to-b from-[#FFFFFF] to-[#0498AE] text-transparent bg-clip-text drop-shadow-[0_1px_0px_rgba(0,0,0,1)] hover:scale-105 duration-300 " >PLAYER NAME</p>
 </div>
 <div id="ido" class="flex justify-center text-xl font-sans text-green font-medium -mt-6"><p class="text-[#8e9291] hover:scale-105 duration-300">ABHEDYA ID</p></div>
             <div id="box" class="flex justify-center items-center mx-auto text-[20px] font-sans text-green font-medium mt-5 w-90 h-12 rounded-3xl bg-gradient-to-b from-[#04281e] to-[#0a4543] p-2"><div class=" bg-[#0C3136] flex w-89 h-11 rounded-3xl items-center justify-center mx-auto text-[#ffffff] absolute ">Position on Leaderboard</div></div>
@@ -20,9 +20,9 @@ export const ProfilePage = ()=>{
       
       
       </div>
-        <img src="https://raw.githubusercontent.com/Prabhav-Batra/Abhedya/refs/heads/Tanmay/src/pages/rb_25585.png" class="-ml-40 z-10 scale-170 mt-50 object-cover overflow-auto hover:ml-0.5 duration-3000"/> 
+        <img src="https://raw.githubusercontent.com/Prabhav-Batra/Abhedya/refs/heads/Tanmay/src/pages/rb_25585.png" class="-ml-40 z-10 scale-170 mt-50 object-cover overflow-auto hover:scale-180 duration-300"/> 
         <div class="absolute bg-white w-500 h-30 -ml-180 -rotate-45 opacity-40 z-0"></div>
-        {/* <div class="absolute w-screen h-screen  bg-[linear-gradient(269.87deg,_rgba(0,31,31,0.8)_0.08%,_rgba(69,116,115,0.24)_99.88%)] shadow-md rounded border-none box-border"></div> */}
+        <div class="absolute w-screen h-screen  bg-[linear-gradient(269.87deg,_rgba(0,31,31,0.8)_0.08%,_rgba(69,116,115,0.24)_99.88%)] shadow-md rounded border-none box-border"></div>
 </div>
 
 
