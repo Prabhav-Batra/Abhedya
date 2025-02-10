@@ -66,7 +66,7 @@ export default function ColorSplashCursor() {
         pointerEvents: "none",
         opacity: "0.8",
         zIndex: "50",
-        mixBlendMode: "screen",
+        mixBlendMode: "difference",
       });
 
       gsap.to(splash, {

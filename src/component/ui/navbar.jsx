@@ -3,10 +3,10 @@ import { Button } from "./button";
 export const Navbar = () => {
   return (
     <header>
-      <nav className="flex justify-between items-center md:px-10 md:py-6 py-4 px-6">
+      <nav className="flex justify-between z-100 items-center md:px-10 md:py-6 py-4 px-6">
         <div className="flex items-center md:gap-3 gap-2 ">
           <Logo />
-          <h1 className="text-[#f9f9f9] font-bold text-lg md:text-2xl cursor-pointer">
+          <h1 className="text-[#f9f9f9] font-bold text-lg md:text-2xl z-100 cursor-pointer">
             Abhedya
           </h1>
         </div>
