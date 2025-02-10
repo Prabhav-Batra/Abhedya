@@ -9,8 +9,12 @@ function App() {
     <RecoilRoot>
       <GridBg>
         <LoadingAnimation />
-        <Navbar />
-        <LandingPage />
+        <div className="flex flex-col justify-between items-center h-full">
+          <div className="w-full">
+            <Navbar />
+          </div>
+          <LandingPage />
+        </div>
       </GridBg>
     </RecoilRoot>
   );
