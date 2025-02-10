@@ -8,9 +8,7 @@ export const LandingPage = () => {
         A game you'll remember forever isn't about graphics but the emotions it
         sparks
       </p>
-      <div className="mt-8">
-        <CenterImage />
-      </div>
+      <CenterImage />
     </div>
   );
 };
