@@ -38,17 +38,17 @@ export const CenterImage = () => {
     <div className="flex justify-center items-center">
       <div
         ref={box1}
-        className=" absolute -rotate-0 md:w-[18vw] md:h-[18vw] sm:w-56 sm:h-56 w-44 h-44 rounded-xl bg-[#0E3F3A] border border-teal-100/10"
+        className=" absolute -rotate-0 md:w-[16vw] md:h-[16vw] sm:w-56 sm:h-56 w-44 h-44 rounded-xl bg-[#0E3F3A] border border-teal-100/10"
       ></div>
       <div
         ref={box2}
-        className="relative sm:w-56 md:w-[18vw] md:h-[18vw] sm:h-56 w-44 h-44 rounded-xl bg-gradient-to-br from-[#031615] to-[#115E59] rotate-0 border border-teal-100/20 shadow shadow-teal-950"
+        className="relative sm:w-56 md:w-[16vw] md:h-[16vw] sm:h-56 w-44 h-44 rounded-xl bg-gradient-to-br from-[#031615] to-[#115E59] rotate-0 border border-teal-100/20 shadow shadow-teal-950"
         onMouseLeave={mouseHandlerLeave}
         onMouseEnter={mouseHandlerEnter}
       >
         <img
-          className={`object-cover absolute bottom-0 md:w-[20vw] md:h-[20vw] sm:w-60 sm:h-60 w-48 h-48 ${isHover ? "invert" : ""} `}
-          src="../../../public/rb_25585 2.png"
+          className={`object-cover absolute bottom-0 md:w-[18vw] md:h-[18vw] sm:w-60 sm:h-60 w-48 h-48 ${isHover ? "invert" : ""} `}
+          src="../../../public/webImage.webp"
         />
       </div>
     </div>

@@ -9,7 +9,7 @@ function App() {
     <RecoilRoot>
       <GridBg>
         <LoadingAnimation />
-        <div className="flex flex-col justify-between items-center h-full">
+        <div className="flex flex-col justify-between items-center lg:min-h-screen">
           <div className="w-full">
             <Navbar />
           </div>
