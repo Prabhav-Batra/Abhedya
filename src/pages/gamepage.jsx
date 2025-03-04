@@ -1,14 +1,14 @@
 import React from "react";
 import { HelpCircle, CircleUserRound, LogOutIcon } from "lucide-react";
+import FloatingBlobs from "../components/FloatingBlobs";
 
 export const GamePage = () => {
   return (
-    <div className="min-h-screen bg-transparent text-[rgba(0,170,190,1)] flex flex-col backdrop-blur-[1px] items-center justify-center p-6 relative overflow-hidden">
-      {/* Blobs */}
-      <div className="absolute w-70 h-70 bg-[rgba(0,96,96,1)] -top-20 -left-20 filter blur-3xl"></div>
-      <div className="absolute w-100 h-50 bg-[rgba(0,96,96,1)] top-20 right-60 filter blur-2xl"></div>
-      <div className="absolute w-75 h-50 bg-[rgba(0,96,96,1)] bottom-5 left-10 filter blur-2xl"></div>
-      <div className="absolute w-50 h-50 bg-[rgba(0,96,96,1)] top-20 filter blur-2xl"></div>
+    <div className="relative min-h-screen bg-transparent text-[rgba(0,170,190,1)] flex flex-col backdrop-blur-[1px] items-center justify-center p-6 ">
+      {/* Floating Blobs Component */}
+      <div cllassNmae="relative z-0">
+      <FloatingBlobs />
+      </div>
       
       {/* Header */}
       <div className="absolute top-[48px] flex w-[calc(100%-64px)] gap-[34.2px] justify-between mx-[128px]  lg:flex-nowrap">
