@@ -1,13 +1,13 @@
 import "./App.css";
 import { GridBg } from "./component/ui/grid-bg";
 import { Home } from "./pages/home";
-import { Navbar } from "./component/ui/navbar";
+import { About } from "./pages/about";
+
 function App() {
   return (
     <GridBg>
-      <Navbar/>
-      {/* <SignUp /> */}
       <Home/>
+      <About/>
     </GridBg>
   );
 }
