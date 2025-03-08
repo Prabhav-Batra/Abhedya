@@ -2,24 +2,27 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { useRecoilValue } from "recoil";
 import { customCursorSizeAtom } from "../../store/atom";
+import { useIsMobileOrTablet } from "../../hooks/useIsMobileOrTablet";
 
 export default function Mask() {
   const customCursorSize = useRecoilValue(customCursorSizeAtom);
   const maskRef = useRef(null);
+  const isMobileOrTablet = useIsMobileOrTablet();
 
   useEffect(() => {
     const mask = maskRef.current;
     gsap.to(mask, {
-      width: `${customCursorSize}px`,
-      height: `${customCursorSize}px`,
-      duration: 0.7,
+      width: isMobileOrTablet ? 0 : customCursorSize,
+      height: isMobileOrTablet ? 0 : customCursorSize,
+      duration: 0.8,
       ease: "elastic.out(0.1,0.4)",
     });
+
     const handleMouseMove = (e) => {
       gsap.to(mask, {
         x: e.clientX,
         y: e.clientY,
-        duration: 2,
+        duration: 2.25,
         ease: "elastic.out(0.11,0.75)",
       });
     };
@@ -27,7 +30,7 @@ export default function Mask() {
     document.addEventListener("mousemove", handleMouseMove);
 
     return () => document.removeEventListener("mousemove", handleMouseMove);
-  }, [customCursorSize]);
+  }, [customCursorSize, isMobileOrTablet]);
 
   return (
     <div

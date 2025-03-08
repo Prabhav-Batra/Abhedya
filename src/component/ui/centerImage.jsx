@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import gsap from "gsap";
 
 export const CenterImage = () => {
+  const isMobileOrTablet = window.matchMedia("(max-width: 768px)").matches;
   const box1 = useRef();
   const box2 = useRef();
   const [isHover, setIsHover] = useState(false);
@@ -47,7 +48,7 @@ export const CenterImage = () => {
         onMouseEnter={mouseHandlerEnter}
       >
         <img
-          className={`object-cover absolute bottom-0 md:w-[18vw] md:h-[18vw] sm:w-60 sm:h-60 w-48 h-48 ${isHover ? "invert" : ""} `}
+          className={`object-cover absolute bottom-0 md:w-[18vw] md:h-[18vw] sm:w-60 sm:h-60 w-48 h-48 ${isHover && !isMobileOrTablet ? "invert" : ""} `}
           src="../../../public/webImage.webp"
         />
       </div>

@@ -13,6 +13,7 @@ export const Navbar = () => {
         <div>
           <div className="flex sm:gap-6 gap-4 items-center text-base">
             <div className="flex items-center gap-3 cursor-pointer">
+              <div className=" text-gray-50"></div>
               <Button text="Log In" variant="main" />
               <Button text="Sign Up" variant="blackBg" />
             </div>
