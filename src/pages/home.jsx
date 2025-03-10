@@ -1,6 +1,7 @@
 import { LinearGradientText } from "../component/ui/linearGradientText";
 import { Button } from "../component/ui/button";
 import { Navbar } from "../component/ui/navbar";
+import { About } from "./about";
 
 export const Home = ()=>{
     return(
@@ -22,6 +23,7 @@ export const Home = ()=>{
                     <Button text={"Play Now!"} variant={"play"} size={"dxl"}></Button>
                 </div>              
             </div>
+            
         </div>
     );
 }

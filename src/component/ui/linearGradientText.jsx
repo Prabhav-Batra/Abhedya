@@ -26,10 +26,4 @@ const variantStyles ={
   sm: "font-[1000] font-[poppins] tracking-tighter sm:text-[6vw] text-[5vh] text-transparent bg-clip-text bg-[linear-gradient(to_bottom,#ffffff_5%,#76807F_60%,#515C5C_69%,#1e1e1e_90%)]",
 };
 
-export const LinearGradientText = ({variant,text }) => {
-  return (
-    <h1 className={`${variantStyles[variant]}`}>
-      {text}
-    </h1>
-  );
-};
+
