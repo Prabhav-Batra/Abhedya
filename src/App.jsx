@@ -5,6 +5,7 @@ import { GridBg } from "./component/ui/grid-bg";
 import { Navbar } from "./component/ui/navbar.jsx";
 import { LandingPage } from "./pages/landingPage.jsx";
 import { SignUp } from "./pages/signUp.jsx";
+import { SignIn } from "./pages/signIn.jsx";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
 
           <Route element={<GridLayout />}>
             <Route path="/signup" element={<SignUp />}></Route>
+            <Route path="/signin" element={<SignIn />}></Route>
           </Route>
         </Routes>
       </BrowserRouter>
@@ -27,7 +29,7 @@ function App() {
 function GridAndCursorAndNavbarLayout() {
   return (
     <>
-      <GridBg>
+      <GridBg leftLight={true} rightLight={false}>
         <Mask />
         <Navbar />
         <Outlet />
@@ -39,7 +41,7 @@ function GridAndCursorAndNavbarLayout() {
 function GridLayout() {
   return (
     <>
-      <GridBg>
+      <GridBg leftLight={true} rightLight={false}>
         <Outlet />
       </GridBg>
     </>
