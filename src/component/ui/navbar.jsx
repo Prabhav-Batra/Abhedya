@@ -2,7 +2,7 @@ import { Logo } from "../../icons/logo.jsx";
 import { Button } from "./button";
 export const Navbar = () => {
   return (
-    <header>
+    <header className="fixed top-0 left-0 w-full">
       <nav className="flex justify-between items-center md:px-10 md:py-6 py-4 px-6">
         <div className="flex items-center md:gap-3 gap-2 ">
           <Logo />

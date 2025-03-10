@@ -1,22 +1,48 @@
-import "./App.css";
-import { LandingPage } from "./pages/landingPage";
-import { Navbar } from "./component/ui/navbar";
-import { GridBg } from "./component/ui/grid-bg";
+import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 import { RecoilRoot } from "recoil";
-import { LoadingAnimation } from "./component/ui/loadingAnimation";
+import Mask from "./component/ui/customCursor.jsx";
+import { GridBg } from "./component/ui/grid-bg";
+import { Navbar } from "./component/ui/navbar.jsx";
+import { LandingPage } from "./pages/landingPage.jsx";
+import { SignUp } from "./pages/signUp.jsx";
+
 function App() {
   return (
     <RecoilRoot>
-      <GridBg>
-        <LoadingAnimation />
-        <div className="flex flex-col justify-between items-center lg:min-h-screen">
-          <div className="w-full">
-            <Navbar />
-          </div>
-          <LandingPage />
-        </div>
-      </GridBg>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<GridAndCursorAndNavbarLayout />}>
+            <Route path="/" element={<LandingPage />}></Route>
+          </Route>
+
+          <Route element={<GridLayout />}>
+            <Route path="/signup" element={<SignUp />}></Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </RecoilRoot>
+  );
+}
+
+function GridAndCursorAndNavbarLayout() {
+  return (
+    <>
+      <GridBg>
+        <Mask />
+        <Navbar />
+        <Outlet />
+      </GridBg>
+    </>
+  );
+}
+
+function GridLayout() {
+  return (
+    <>
+      <GridBg>
+        <Outlet />
+      </GridBg>
+    </>
   );
 }
 
