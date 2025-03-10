@@ -3,6 +3,8 @@ import gsap from "gsap";
 import { useSetRecoilState } from "recoil";
 import { customCursorSizeAtom } from "../../store/atom";
 
+import { UpRightArrow } from "../../icons/up-rightArrow.jsx";
+
 const variantStyles = {
   main: "bg-[#242C31] md:text-lg text-sm py-1 px-3 text-[#f9f9f9] font-medium rounded border-teal-50/10 border hover:bg-teal-900 cursor-pointer transition-all",
   blackBg:

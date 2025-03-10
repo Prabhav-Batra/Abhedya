@@ -1,4 +1,3 @@
-import { Logo } from "../../icons/logo.jsx";
 import { Button } from "./button.jsx";
 export const Navbar = () => {
   return (
