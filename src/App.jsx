@@ -6,6 +6,7 @@ import { GridBg } from "./component/ui/grid-bg";
 import { RecoilRoot } from "recoil";
 import { LoadingAnimation } from "./component/ui/loadingAnimation";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { SignIn } from "./pages/signin";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
               <Route path="/" element={<LandingPage />} />
               <Route path="/home" element={<HomeWithAboutLayout />} />
               <Route path="/gamepage" element={<Gameandblob />} />
+              <Route path="/signin" element={<SignIn />} />
             </Routes>
           </Router>
         
