@@ -8,23 +8,24 @@ import { LoadingAnimation } from "./component/ui/loadingAnimation";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { SignIn } from "./pages/signin";
 import { SignUp } from "./pages/signUp";
+import { Navbar } from "./component/ui/navbar";
+import { Button } from "./component/ui/button";
 
 function App() {
   return (
     <RecoilRoot>
       <GridBg>
         <LoadingAnimation />
-        
-          <Router>
-            <Routes>
-              <Route path="/" element={<LandingPage />} />
-              <Route path="/home" element={<HomeWithAboutLayout />} />
-              <Route path="/gamepage" element={<Gameandblob />} />
-              <Route path="/signin" element={<SignIn />} />
-              <Route path="/signup" element={<SignUp />} />
-            </Routes>
-          </Router>
-        
+
+        <Router>
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/home" element={<HomeWithAboutLayout />} />
+            <Route path="/gamepage" element={<Gameandblob />} />
+            <Route path="/signin" element={<SignIn />} />
+            <Route path="/signup" element={<SignUp />} />
+          </Routes>
+        </Router>
       </GridBg>
     </RecoilRoot>
   );
