@@ -11,10 +11,14 @@ export const Navbar = () => {
           </h1>
         </div>
         <div className="flex sm:gap-6 gap-4 items-center text-base">
-          <div className="flex items-center gap-3 cursor-pointer">
-            <div className=" text-gray-50"></div>
-            <Button text="Log In" variant="main" />
-            <Button text="Sign Up" variant="blackBg" />
+          <div className="flex items-center md:gap-5 gap-3 cursor-pointer">
+            <Button text="Log In" variant="main" animation={true} size={"sm"} />
+            <Button
+              text="Sign Up"
+              variant="blackBg"
+              animation={true}
+              size={"sm"}
+            />
           </div>
         </div>
       </nav>

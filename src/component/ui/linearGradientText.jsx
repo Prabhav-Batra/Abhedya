@@ -2,11 +2,11 @@ import { useRef } from "react";
 
 const sizeStyles = {
   lg: " text-6xl sm:text-[15vw]  ",
-  md: "text-6xl text-center pb-2",
+  md: "text-6xl text-center pb-5",
 };
 
 const defaultStyles =
-  "overflow-hidden font-[poppins] tracking-tighter text-transparent bg-clip-text bg-[linear-gradient(to_bottom,#ffffff_5%,#76807F_60%,#515C5C_69%,#1e1e1e_90%)] font-extrabold";
+  "overflow-hidden font-[poppins] tracking-tighter text-transparent bg-clip-text bg-[linear-gradient(to_bottom,#ffffff_5%,#76807F_60%,#515C5C_69%,#1e1e1e_90%)] font-extrabold whitespace-nowrap";
 
 export const LinearGradientText = ({ text, subtitlePreset, size }) => {
   const titleRef = useRef();
