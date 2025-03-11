@@ -7,6 +7,7 @@ import { Navbar } from "./component/ui/navbar";
 import { Error404Page } from "./pages/error404";
 import { Gameandblob } from "./pages/gamepageandblob";
 import { LandingPage } from "./pages/landingPage";
+import { Leaderboard } from "./pages/leaderboard";
 import { SignIn } from "./pages/signin";
 import { SignUp } from "./pages/signUp";
 import { UpdatedHomePage } from "./pages/updatedHome";
@@ -24,6 +25,7 @@ function App() {
             <Route path="/*" element={<Error404Page></Error404Page>} />
           </Route>
           <Route path="/gamepage" element={<Gameandblob />} />
+          <Route path="/leaderboard" element={<Leaderboard />} />
         </Routes>
       </BrowserRouter>
     </RecoilRoot>
