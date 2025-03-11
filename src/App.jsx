@@ -18,6 +18,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<GridBgLayoutAndNavbar />}>
+            <Route path="/leaderboard" element={<Leaderboard />} />
             <Route path="/home" element={<UpdatedHomePage />} />
             <Route path="/" element={<LandingPage />} />
             <Route path="/signup" element={<SignUp />} />
@@ -25,7 +26,6 @@ function App() {
             <Route path="/*" element={<Error404Page></Error404Page>} />
           </Route>
           <Route path="/gamepage" element={<Gameandblob />} />
-          <Route path="/leaderboard" element={<Leaderboard />} />
         </Routes>
       </BrowserRouter>
     </RecoilRoot>
