@@ -2,6 +2,7 @@ import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 import { RecoilRoot } from "recoil";
 import "./App.css";
 import Mask from "./component/ui/customCursor";
+import { Footer } from "./component/ui/footer";
 import { GridBg } from "./component/ui/grid-bg";
 import { Navbar } from "./component/ui/navbar";
 import { Error404Page } from "./pages/error404";
@@ -34,11 +35,14 @@ function App() {
 
 function GridBgLayoutAndNavbar() {
   return (
-    <GridBg>
-      <Navbar />
-      <Mask />
-      <Outlet />
-    </GridBg>
+    <>
+      <GridBg>
+        <Mask />
+        <Navbar />
+        <Outlet />
+      </GridBg>
+      <Footer />
+    </>
   );
 }
 
