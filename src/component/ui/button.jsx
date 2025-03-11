@@ -14,12 +14,13 @@ const sizeStyles = {
   sm: "md:text-lg py-1 px-3 text-sm",
   md: "md:text-xl md:py-2 md:px-3 text-base",
   lg: "md:text-xl md:py-2 md:px-3 text-base",
+  nav: "md:text-lg text-4xl py-1 px-3 ",
 };
 
 const defaultStyles =
   "font-medium md:rounded-lg rounded cursor-pointer transition-all whitespace-nowrap";
 
-export const Button = ({ variant, text, animation, size }) => {
+export const Button = ({ variant, text, animation, size, onClickHandler }) => {
   const buttonRef = useRef(null);
   const setCustomCursorSize = useSetRecoilState(customCursorSizeAtom);
   const mouseHandlerEnter = () => {
@@ -73,6 +74,9 @@ export const Button = ({ variant, text, animation, size }) => {
   return (
     <button
       ref={buttonRef}
+      onClick={() => {
+        onClickHandler();
+      }}
       className={`${variantStyles[variant]} relative overflow-hidden ${defaultStyles} ${sizeStyles[size]} `}
       onMouseEnter={mouseHandlerEnter}
       onMouseLeave={mouseHandlerLeave}

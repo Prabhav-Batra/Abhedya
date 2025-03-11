@@ -1,18 +1,20 @@
-import { Logo } from "../../icons/logo.jsx";
-import { CrossIcon } from "../../icons/cross.jsx";
-import { PlusIcon } from "../../icons/plus.jsx";
-import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useRecoilState } from "recoil";
 import { useIsMobileOrTablet } from "../../hooks/useIsMobileOrTablet.js";
+import { CrossIcon } from "../../icons/cross.jsx";
+import { Logo } from "../../icons/logo.jsx";
+import { PlusIcon } from "../../icons/plus.jsx";
+import { isNavOpenAtom } from "../../store/atom.js";
 import { Button } from "../ui/button.jsx";
 
 export const Navbar = () => {
-  const [isNavOpen, setIsNavOpen] = useState(false);
+  const navigate = useNavigate();
+  const [isNavOpen, setIsNavOpen] = useRecoilState(isNavOpenAtom);
   const isMobileOrTablet = useIsMobileOrTablet();
 
   return (
     <header className="py-5 px-5 fixed w-full z-30">
       <nav className="flex justify-between items-center">
-        {/* Logo Section */}
         <div className="flex items-center gap-3">
           <Logo />
           <h1 className="text-white font-bold text-lg md:text-2xl cursor-pointer">
@@ -35,25 +37,37 @@ export const Navbar = () => {
           <Button
             text={"Home"}
             animation={true}
-            size={"sm"}
+            size={"nav"}
             variant="transparent"
+            onClickHandler={() => {
+              navigate("/home");
+              setIsNavOpen(false);
+            }}
           />
           <Button
             text={"Leaderboard"}
             animation={true}
-            size={"sm"}
+            size={"nav"}
             variant="transparent"
+            onClickHandler={() => {
+              navigate("/leaderboard");
+              setIsNavOpen(false);
+            }}
           />
           <Button
             text={"Sign Up"}
             animation={true}
-            size={"sm"}
+            size={"nav"}
             variant="transparent"
+            onClickHandler={() => {
+              navigate("/signup");
+              setIsNavOpen(false);
+            }}
           />
           <Button
             text={"Sign Out"}
             animation={true}
-            size={"sm"}
+            size={"nav"}
             variant="transparent"
           />
         </div>

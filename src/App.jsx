@@ -1,13 +1,8 @@
-import {
-  BrowserRouter as Router,
-  Outlet,
-  Route,
-  Routes,
-} from "react-router-dom";
+import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 import { RecoilRoot } from "recoil";
 import "./App.css";
+import Mask from "./component/ui/customCursor";
 import { GridBg } from "./component/ui/grid-bg";
-import { LoadingAnimation } from "./component/ui/loadingAnimation";
 import { Navbar } from "./component/ui/navbar";
 import { Error404Page } from "./pages/error404";
 import { Gameandblob } from "./pages/gamepageandblob";
@@ -19,24 +14,18 @@ import { UpdatedHomePage } from "./pages/updatedHome";
 function App() {
   return (
     <RecoilRoot>
-      <GridBg>
-        <LoadingAnimation />
-
-        <Router>
-          <Routes>
-            <Route element={<GridBgLayoutAndNavbar />}>
-              <Route path="/home" element={<UpdatedHomePage />} />
-              <Route path="/" element={<LandingPage />} />
-            </Route>
-            <Route path="/gamepage" element={<Gameandblob />} />
-            <Route path="/signin" element={<SignIn />} />
+      <BrowserRouter>
+        <Routes>
+          <Route element={<GridBgLayoutAndNavbar />}>
+            <Route path="/home" element={<UpdatedHomePage />} />
+            <Route path="/" element={<LandingPage />} />
             <Route path="/signup" element={<SignUp />} />
-            <Route element={<NavbarLayout />}>
-              <Route path="/*" element={<Error404Page></Error404Page>} />
-            </Route>
-          </Routes>
-        </Router>
-      </GridBg>
+            <Route path="/signin" element={<SignIn />} />
+            <Route path="/*" element={<Error404Page></Error404Page>} />
+          </Route>
+          <Route path="/gamepage" element={<Gameandblob />} />
+        </Routes>
+      </BrowserRouter>
     </RecoilRoot>
   );
 }
@@ -45,6 +34,7 @@ function GridBgLayoutAndNavbar() {
   return (
     <GridBg>
       <Navbar />
+      <Mask />
       <Outlet />
     </GridBg>
   );
