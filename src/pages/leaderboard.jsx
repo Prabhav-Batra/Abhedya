@@ -4,7 +4,7 @@ const Details = ({ name, roll, srno }) => {
   return (
     <div class="flex items-center bg-teal-700 px-9 py-3 rounded-full text-white">
       <span className="font-bold w-8">{srno}.</span>
-      <div className="w-6 h-6 bg-gray-800 rounded-full mr-7"></div>
+      <div className="w-7 h-6 bg-gray-800 rounded-full mr-7"></div>
       <span className="flex-grow">{name}</span>
       <span className="mr-8">{roll}</span>
     </div>
