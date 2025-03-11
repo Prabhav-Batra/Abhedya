@@ -10,7 +10,7 @@ export const Navbar = () => {
   const isMobileOrTablet = useIsMobileOrTablet();
 
   return (
-    <header className="py-5 px-5 relative ">
+    <header className="py-5 px-5 fixed w-full z-30">
       <nav className="flex justify-between items-center">
         {/* Logo Section */}
         <div className="flex items-center gap-3">
@@ -20,16 +20,10 @@ export const Navbar = () => {
           </h1>
         </div>
 
-        {/* Navigation Links */}
         <div
-          className={`fixed inset-0 md:bg-transparent bg-teal-900  text-white flex flex-col items-center justify-center gap-6 transition-transform duration-500 ease-in-out md:static md:flex md:flex-row md:gap-6 
-${
-  isNavOpen && isMobileOrTablet
-    ? "translate-y-0"
-    : "-translate-y-full md:translate-y-0"
-}`}
+          className={`fixed z-30 inset-0 md:bg-transparent bg-teal-900 text-white flex flex-col items-center justify-center gap-6 transition-transform duration-500 ease-in-out 
+          md:static md:flex md:flex-row md:gap-6 ${isNavOpen && isMobileOrTablet ? "translate-y-0" : "-translate-y-full md:translate-y-0"}`}
         >
-          {/* Close Button (Only for mobile) */}
           {isMobileOrTablet && (
             <div
               className="absolute top-5 right-5 cursor-pointer md:hidden"
@@ -38,19 +32,29 @@ ${
               <CrossIcon />
             </div>
           )}
-          <Button text={"Home"} animation={true} size={"sm"} />
-          <Button text={"Leaderboard"} animation={true} size={"sm"} />
+          <Button
+            text={"Home"}
+            animation={true}
+            size={"sm"}
+            variant="transparent"
+          />
+          <Button
+            text={"Leaderboard"}
+            animation={true}
+            size={"sm"}
+            variant="transparent"
+          />
           <Button
             text={"Sign Up"}
             animation={true}
             size={"sm"}
-            variant="main"
+            variant="transparent"
           />
           <Button
             text={"Sign Out"}
             animation={true}
             size={"sm"}
-            variant="blackBg"
+            variant="transparent"
           />
         </div>
 

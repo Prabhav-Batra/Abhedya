@@ -2,12 +2,12 @@ import { useRef } from "react";
 
 const sizeStyles = {
   lg: " text-6xl sm:text-[15vw]  ",
-  base: "md:text-[10vw] text-[15vw] text-center pb-5",
+  base: "md:text-[8vw] text-[15vw] text-center pb-5",
   md: "text-6xl text-center pb-5",
 };
 
 const defaultStyles =
-  "overflow-hidden font-[poppins] tracking-tighter text-transparent bg-clip-text bg-[linear-gradient(to_bottom,#ffffff_5%,#76807F_60%,#515C5C_69%,#1e1e1e_90%)] font-extrabold whitespace-nowrap";
+  "overflow-hidden font-[poppins] tracking-tight text-transparent bg-clip-text bg-[linear-gradient(to_bottom,#ffffff_5%,#76807F_60%,#515C5C_69%,#1e1e1e_90%)] font-extrabold whitespace-nowrap";
 
 export const LinearGradientText = ({ text, subtitlePreset, size }) => {
   const titleRef = useRef();

@@ -7,6 +7,7 @@ const variantStyles = {
   main: "bg-[#242C31]  py-1 px-3 text-[#f9f9f9] border-teal-50/10 border hover:bg-teal-900 ",
   blackBg:
     "bg-[#f9f9f9] py-1 px-3 text-[#242C31]  border-teal-50/10 border hover:bg-teal-50 ",
+  transparent: "",
 };
 
 const sizeStyles = {
@@ -29,7 +30,7 @@ export const Button = ({ variant, text, animation, size }) => {
     if (!buttonRef.current) return;
 
     gsap.to(buttonRef.current.querySelectorAll(".firstDiv span"), {
-      y: "-118%",
+      y: size === "lg" ? "-129%" : "-118%",
       opacity: 1,
       rotateX: 0,
       duration: 0.4,
@@ -80,7 +81,7 @@ export const Button = ({ variant, text, animation, size }) => {
       {/* First layer for hover animation */}
       <div className="absolute top-full flex items-center justify-center firstDiv">
         {text.split("").map((char, key) => (
-          <span className="inline-block" key={key}>
+          <span className="inline-block " key={key}>
             {char === " " ? "\u00A0" : char}
           </span>
         ))}

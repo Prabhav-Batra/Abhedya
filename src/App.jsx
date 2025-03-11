@@ -11,10 +11,10 @@ import { LoadingAnimation } from "./component/ui/loadingAnimation";
 import { Navbar } from "./component/ui/navbar";
 import { Error404Page } from "./pages/error404";
 import { Gameandblob } from "./pages/gamepageandblob";
-import { HomeWithAboutLayout } from "./pages/homewithabout";
 import { LandingPage } from "./pages/landingPage";
 import { SignIn } from "./pages/signin";
 import { SignUp } from "./pages/signUp";
+import { UpdatedHomePage } from "./pages/updatedHome";
 
 function App() {
   return (
@@ -24,8 +24,10 @@ function App() {
 
         <Router>
           <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/home" element={<HomeWithAboutLayout />} />
+            <Route element={<GridBgLayoutAndNavbar />}>
+              <Route path="/home" element={<UpdatedHomePage />} />
+              <Route path="/" element={<LandingPage />} />
+            </Route>
             <Route path="/gamepage" element={<Gameandblob />} />
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
@@ -36,6 +38,15 @@ function App() {
         </Router>
       </GridBg>
     </RecoilRoot>
+  );
+}
+
+function GridBgLayoutAndNavbar() {
+  return (
+    <GridBg>
+      <Navbar />
+      <Outlet />
+    </GridBg>
   );
 }
 

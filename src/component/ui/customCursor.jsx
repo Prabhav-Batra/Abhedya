@@ -32,7 +32,7 @@ export default function Mask() {
   return (
     <div
       ref={maskRef}
-      className="fixed top-0 left-0 bg-teal-50 rounded-full pointer-events-none z-10 mix-blend-difference -translate-x-1/2 -translate-y-1/2"
+      className="fixed top-0 left-0 bg-teal-50 rounded-full pointer-events-none z-[100] mix-blend-difference -translate-x-1/2 -translate-y-1/2"
     ></div>
   );
 }
