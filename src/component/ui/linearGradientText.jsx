@@ -2,7 +2,7 @@ import { useRef } from "react";
 
 const sizeStyles = {
   lg: " text-6xl sm:text-[15vw]  ",
-  base: "md:text-[8vw] text-[15vw] text-center pb-5",
+  base: "md:text-[8vw] text-[15vw] text-center ",
   md: "text-6xl text-center pb-5",
 };
 
