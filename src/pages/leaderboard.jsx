@@ -13,7 +13,7 @@ export const Leaderboard = () => {
   return (
     <body className="">
       <div className="min-h-screen min-w-screen ">
-        <p1 className="text-9xl border-l-8 bg-gradient-to-b from-teal-900 to-transparent text-transparent bg-clip-text mx-auto flex justify-center mt-30 font-extrabold">
+        <p1 className="text-base sm:text-2xl md:text-4xl lg:text-7xl xl:text-9xl border-l-8 bg-gradient-to-b from-teal-900 to-transparent text-transparent bg-clip-text mx-auto flex justify-center mt-30 font-extrabold">
           LEADERBOARD
         </p1>
         <div className="bg-[#1E1E1E] rounded-xl  min-h-200 mx-50 p-10">
