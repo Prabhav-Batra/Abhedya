@@ -15,7 +15,12 @@ export const Navbar = () => {
   return (
     <header className="py-5 px-5 fixed w-full z-30">
       <nav className="flex justify-between items-center">
-        <div className="flex items-center gap-3">
+        <div
+          onClick={() => {
+            navigate("/home");
+          }}
+          className="flex items-center gap-3"
+        >
           <Logo />
           <h1 className="text-white font-bold text-lg md:text-2xl cursor-pointer">
             Abhedya
