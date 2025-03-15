@@ -13,7 +13,7 @@ export const Navbar = ({ navItems }) => {
   const isMobileOrTablet = useIsMobileOrTablet();
 
   return (
-    <header className="py-5 px-5 fixed w-full z-30">
+    <header className="py-7 px-15 fixed w-full z-30">
       <nav className="flex justify-between items-center">
         <div
           onClick={() => {

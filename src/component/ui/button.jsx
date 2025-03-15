@@ -7,7 +7,7 @@ const variantStyles = {
   main: "bg-[#242C31]  py-1 px-3 text-[#f9f9f9] border-teal-50/10 border hover:bg-teal-900 ",
   blackBg:
     "bg-[#f9f9f9] py-1 px-3 text-[#242C31]  border-teal-50/10 border hover:bg-teal-50 ",
-  transparent: "",
+  transparent: "text-teal-50",
 };
 
 const sizeStyles = {
@@ -24,12 +24,11 @@ export const Button = ({ variant, text, animation, size, onClickHandler }) => {
   const buttonRef = useRef(null);
   const setCustomCursorSize = useSetRecoilState(customCursorSizeAtom);
   const mouseHandlerEnter = () => {
+    setCustomCursorSize(0);
+    if (!buttonRef.current) return;
     if (!animation) {
       return;
     }
-    setCustomCursorSize(0);
-    if (!buttonRef.current) return;
-
     gsap.to(buttonRef.current.querySelectorAll(".firstDiv span"), {
       y: size === "lg" ? "-129%" : "-118%",
       opacity: 1,
@@ -48,11 +47,11 @@ export const Button = ({ variant, text, animation, size, onClickHandler }) => {
   };
 
   const mouseHandlerLeave = () => {
+    setCustomCursorSize(50);
+    if (!buttonRef.current) return;
     if (!animation) {
       return;
     }
-    setCustomCursorSize(50);
-    if (!buttonRef.current) return;
 
     gsap.to(buttonRef.current.querySelectorAll(".firstDiv span"), {
       y: "0%",
