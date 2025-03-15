@@ -7,7 +7,7 @@ import { PlusIcon } from "../../icons/plus.jsx";
 import { isNavOpenAtom } from "../../store/atom.js";
 import { Button } from "../ui/button.jsx";
 
-export const Navbar = () => {
+export const Navbar = ({ navItems }) => {
   const navigate = useNavigate();
   const [isNavOpen, setIsNavOpen] = useRecoilState(isNavOpenAtom);
   const isMobileOrTablet = useIsMobileOrTablet();
@@ -39,45 +39,23 @@ export const Navbar = () => {
               <CrossIcon />
             </div>
           )}
-          <Button
-            text={"Home"}
-            animation={true}
-            size={"nav"}
-            variant="transparent"
-            onClickHandler={() => {
-              navigate("/home");
-              setIsNavOpen(false);
-            }}
-          />
-          <Button
-            text={"Leaderboard"}
-            animation={true}
-            size={"nav"}
-            variant="transparent"
-            onClickHandler={() => {
-              navigate("/leaderboard");
-              setIsNavOpen(false);
-            }}
-          />
-          <Button
-            text={"Sign Up"}
-            animation={true}
-            size={"nav"}
-            variant="transparent"
-            onClickHandler={() => {
-              navigate("/signup");
-              setIsNavOpen(false);
-            }}
-          />
-          <Button
-            text={"Sign Out"}
-            animation={true}
-            size={"nav"}
-            variant="transparent"
-          />
+          {navItems.map((element, index) => {
+            return (
+              <Button
+                key={index}
+                text={element}
+                animation={true}
+                size={"nav"}
+                variant="transparent"
+                onClickHandler={() => {
+                  navigate(element.split(" ").join("").toLowerCase());
+                  setIsNavOpen(false);
+                }}
+              />
+            );
+          })}
         </div>
 
-        {/* Open Menu Icon (Only for mobile) */}
         {isMobileOrTablet && !isNavOpen && (
           <div
             className="cursor-pointer text-white md:hidden"

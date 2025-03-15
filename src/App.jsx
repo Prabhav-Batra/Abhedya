@@ -38,7 +38,7 @@ function GridBgLayoutAndNavbar() {
     <>
       <GridBg>
         <Mask />
-        <Navbar />
+        <Navbar navItems={["Home", "Leaderboard", "Sign Up", "Sign In"]} />
         <Outlet />
       </GridBg>
       <Footer />
