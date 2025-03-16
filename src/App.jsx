@@ -22,9 +22,11 @@ function App() {
             <Route path="/leaderboard" element={<Leaderboard />} />
             <Route path="/home" element={<UpdatedHomePage />} />
             <Route path="/" element={<LandingPage />} />
+            <Route path="/*" element={<Error404Page></Error404Page>} />
+          </Route>
+          <Route element={<NavbarLayout />}>
             <Route path="/signup" element={<SignUp />} />
             <Route path="/signin" element={<SignIn />} />
-            <Route path="/*" element={<Error404Page></Error404Page>} />
           </Route>
           <Route path="/gamepage" element={<Gameandblob />} />
         </Routes>
@@ -49,8 +51,11 @@ function GridBgLayoutAndNavbar() {
 function NavbarLayout() {
   return (
     <>
-      <Navbar />
-      <Outlet />
+      <GridBg>
+        <Navbar navItems={["Home", "Leaderboard", "Sign Up", "Sign In"]} />
+        <Outlet />
+      </GridBg>
+      <Footer />
     </>
   );
 }

@@ -1,5 +1,5 @@
-import { useRef } from "react";
 import gsap from "gsap";
+import { useRef, useState } from "react";
 import { useSetRecoilState } from "recoil";
 import { customCursorSizeAtom } from "../../store/atom";
 
@@ -7,7 +7,7 @@ const variantStyles = {
   main: "bg-[#242C31]  py-1 px-3 text-[#f9f9f9] border-teal-50/10 border hover:bg-teal-900 ",
   blackBg:
     "bg-[#f9f9f9] py-1 px-3 text-[#242C31]  border-teal-50/10 border hover:bg-teal-50 ",
-  transparent: "text-teal-50",
+  transparent: "text-teal-50 ",
 };
 
 const sizeStyles = {
@@ -20,11 +20,21 @@ const sizeStyles = {
 const defaultStyles =
   "font-medium md:rounded-lg rounded cursor-pointer transition-all whitespace-nowrap";
 
-export const Button = ({ variant, text, animation, size, onClickHandler }) => {
+export const Button = ({
+  variant,
+  text,
+  animation,
+  size,
+  onClickHandler,
+  underLineAnimation,
+}) => {
   const buttonRef = useRef(null);
   const setCustomCursorSize = useSetRecoilState(customCursorSizeAtom);
+  const [isButtonHoveredOn, setIsButtonHovered] = useState(false);
+
   const mouseHandlerEnter = () => {
     setCustomCursorSize(0);
+    setIsButtonHovered(true);
     if (!buttonRef.current) return;
     if (!animation) {
       return;
@@ -48,6 +58,7 @@ export const Button = ({ variant, text, animation, size, onClickHandler }) => {
 
   const mouseHandlerLeave = () => {
     setCustomCursorSize(50);
+    setIsButtonHovered(false);
     if (!buttonRef.current) return;
     if (!animation) {
       return;
@@ -97,6 +108,11 @@ export const Button = ({ variant, text, animation, size, onClickHandler }) => {
           </span>
         ))}
       </div>
+      {underLineAnimation && (
+        <div
+          className={`absolute right-0 bottom-0 w-0 h-0.5 bg-teal-50 transition-all duration-500 delay-75 ease-in-out pointer-events-none ${isButtonHoveredOn ? "left-0 w-full" : ""}`}
+        ></div>
+      )}
     </button>
   );
 };

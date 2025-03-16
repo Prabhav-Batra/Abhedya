@@ -27,7 +27,8 @@ export const SignUp = () => {
             />
             <Button
               text={"Sign In"}
-              animation={true}
+              animation={false}
+              underLineAnimation={true}
               size={"lg"}
               variant="transparent"
               onClickHandler={() => {

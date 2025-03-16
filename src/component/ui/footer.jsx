@@ -1,9 +1,22 @@
 import { useNavigate } from "react-router-dom";
+import { useSetRecoilState } from "recoil";
+import { customCursorSizeAtom } from "../../store/atom";
 
 export const Footer = () => {
   const navigate = useNavigate();
+  const setCustomCursorSize = useSetRecoilState(customCursorSizeAtom);
+  function onMouseEnterHandler() {
+    setCustomCursorSize(0);
+  }
+  function onMouseLeaveHandler() {
+    setCustomCursorSize(50);
+  }
   return (
-    <footer className="bg-[#e0e0e0] flex md:flex-row flex-col justify-between gap-5 md:px-10 px-5 py-10 z-10 ">
+    <footer
+      onMouseEnter={onMouseEnterHandler}
+      onMouseLeave={onMouseLeaveHandler}
+      className="bg-[#e0e0e0] flex md:flex-row flex-col justify-between gap-5 md:px-15 px-15 py-10 z-10 "
+    >
       <div>
         <div className="md:mb-4 mb-2 flex gap-2 items-center">
           <img

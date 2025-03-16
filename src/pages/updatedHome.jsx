@@ -29,7 +29,7 @@ export const UpdatedHomePage = () => {
             />
           </div>
         </div>
-        <div className="flex justify-center items-end  ">
+        <div className="flex justify-center items-end ">
           <img
             className="lg:h-[22vw] md:h-[35vw] h-[65vw] object-bottom rotate-y-180 grayscale "
             src="../../public/Futuristic Armored Figure Background Removed.png"
