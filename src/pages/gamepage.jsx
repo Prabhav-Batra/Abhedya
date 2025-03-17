@@ -1,17 +1,10 @@
 import { CircleUserRound, HelpCircle } from "lucide-react";
 import React from "react";
 import FloatingBlobs from "../component/ui/FloatingBlobs";
-import { Navbar } from "../component/ui/navbar";
 
 export const GamePage = () => {
   return (
     <div className="relative min-h-screen bg-transparent text-[rgba(0,170,190,1)] flex flex-col backdrop-blur-[1px] items-center justify-center p-6 ">
-      {/* Navbar at the very top */}
-      <div className="absolute top-0 left-0 w-full z-50">
-        <Navbar />
-      </div>
-
-      {/*pushing the elements down from the navbar*/}
       <div className="w-full pt-[80px] flex flex-col items-center">
         {/* Floating Blobs Component */}
         <div className="relative z-0">
