@@ -2,6 +2,7 @@ import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 import { RecoilRoot } from "recoil";
 import Mask from "./component/ui/customCursor";
 import { Footer } from "./component/ui/footer";
+import { FooterTwo } from "./component/ui/footer-2";
 import { GridBg } from "./component/ui/grid-bg";
 import { Navbar } from "./component/ui/navbar";
 import { Error404Page } from "./pages/error404";
@@ -10,7 +11,6 @@ import { LandingPage } from "./pages/landingPage";
 import { Leaderboard } from "./pages/leaderboard";
 import { SignIn } from "./pages/signin";
 import { SignUp } from "./pages/signUp";
-import { UpdatedHomePage } from "./pages/updatedHome";
 
 function App() {
   return (
@@ -19,7 +19,6 @@ function App() {
         <Routes>
           <Route element={<GridBgLayoutAndNavbar />}>
             <Route path="/leaderboard" element={<Leaderboard />} />
-            <Route path="/home" element={<UpdatedHomePage />} />
             <Route path="/" element={<LandingPage />} />
             <Route path="/*" element={<Error404Page></Error404Page>} />
           </Route>
@@ -45,15 +44,15 @@ function GridBgLayoutAndNavbar() {
           navItems={["Home", "Leaderboard", "Sign Up", "Sign In", "Game Page"]}
         />
         <Outlet />
+        <FooterTwo />
       </GridBg>
-      <Footer />
     </>
   );
 }
 
 function GridWithoutSpotLightAndCustomCursor() {
   return (
-    <GridBg leftLight={true} rightLight={true}>
+    <GridBg>
       <Navbar
         navItems={["Home", "Leaderboard", "Sign Up", "Sign In", "Game Page"]}
       />
@@ -70,8 +69,8 @@ function NavbarLayout() {
           navItems={["Home", "Leaderboard", "Sign Up", "Sign In", "Game Page"]}
         />
         <Outlet />
+        <FooterTwo />
       </GridBg>
-      <Footer />
     </>
   );
 }

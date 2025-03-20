@@ -6,7 +6,6 @@ export const GamePage = () => {
   return (
     <div className="relative min-h-screen bg-transparent text-[rgba(0,170,190,1)] flex flex-col backdrop-blur-[1px] items-center justify-center p-6 ">
       <div className="w-full pt-[80px] flex flex-col items-center">
-        {/* Floating Blobs Component */}
         <div className="relative z-0">
           <FloatingBlobs />
         </div>
@@ -42,13 +41,8 @@ export const GamePage = () => {
             maxHeight: "calc(100vh - 100px)",
           }}
         >
-          {" "}
-          {/* Adjusted height */}
-          {/* Content Section - Question + Image */}
-          <div className="flex flex-col lg:flex-row w-full h-[400px] ">
-            {/* Wrapper to Enable Scrolling for Mobile */}
+          <div className="flex flex-col lg:flex-row w-full  ">
             <div className="w-full flex flex-col lg:flex-row overflow-y-auto lg:overflow-hidden max-h-[100vh] h-[80vh]">
-              {/* Left Side - Question Text */}
               <div className="w-full lg:w-1/2 text-left lg:overflow-y-auto p-4 ">
                 <p className="text-[2.1vw] md:text-base text-gray-300">
                   Sam has a toy box with 5 toys: a red car, a blue ball, a

@@ -12,11 +12,11 @@ export const Navbar = ({ navItems }) => {
   const [isNavOpen, setIsNavOpen] = useRecoilState(isNavOpenAtom);
   const isMobileOrTablet = useIsMobileOrTablet();
   return (
-    <header className="py-7 px-15 fixed w-full z-30">
+    <header className="lg:py-7 lg:px-15 p-5  fixed w-full z-30">
       <nav className="flex justify-between items-center">
         <div
           onClick={() => {
-            navigate("/home");
+            navigate("/");
           }}
           className="flex items-center gap-3"
         >
@@ -48,6 +48,11 @@ export const Navbar = ({ navItems }) => {
                 size={"nav"}
                 variant="transparent"
                 onClickHandler={() => {
+                  if (element === "Home") {
+                    navigate("/");
+                    setIsNavOpen(false);
+                    return;
+                  }
                   navigate(element.split(" ").join("").toLowerCase());
                   setIsNavOpen(false);
                 }}
