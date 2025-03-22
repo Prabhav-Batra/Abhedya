@@ -2,8 +2,8 @@ import { useNavigate } from "react-router-dom";
 import { useRecoilState } from "recoil";
 import { useIsMobileOrTablet } from "../../hooks/useIsMobileOrTablet.js";
 import { CrossIcon } from "../../icons/cross.jsx";
+import { HamburgerIcon } from "../../icons/hamburger.jsx";
 import { Logo } from "../../icons/logo.jsx";
-import { PlusIcon } from "../../icons/plus.jsx";
 import { isNavOpenAtom } from "../../store/atom.js";
 import { Button } from "../ui/button.jsx";
 
@@ -27,7 +27,7 @@ export const Navbar = ({ navItems }) => {
         </div>
 
         <div
-          className={`fixed z-30 inset-0 md:bg-transparent bg-teal-950 text-teal-100 flex flex-col items-center justify-center gap-6 transition-transform duration-500 ease-in-out 
+          className={`fixed z-30 inset-0 md:bg-transparent bg-teal-950/30 backdrop-blur-2xl text-teal-100 flex flex-col items-center justify-center gap-6 transition-transform duration-500 ease-in-out 
           md:static md:flex md:flex-row md:gap-6 ${isNavOpen && isMobileOrTablet ? "translate-y-0" : "-translate-y-full md:translate-y-0"}`}
         >
           {isMobileOrTablet && (
@@ -66,7 +66,7 @@ export const Navbar = ({ navItems }) => {
             className="cursor-pointer text-white md:hidden"
             onClick={() => setIsNavOpen(true)}
           >
-            <PlusIcon />
+            <HamburgerIcon />
           </div>
         )}
       </nav>

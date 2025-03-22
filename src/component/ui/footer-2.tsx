@@ -1,9 +1,8 @@
-import { GitCommitVertical } from "lucide-react";
 import React from "react";
 import { GithubIcon } from "../../icons/github";
 import { InstagramIcon } from "../../icons/instagram";
 import { LinkedInIcon } from "../../icons/linkedIn";
-import { MapPin } from "../../icons/mapPin";
+import { Logo } from "../../icons/logo";
 
 export const FooterTwo = () => {
   return (
@@ -15,8 +14,7 @@ export const FooterTwo = () => {
               <img
                 src="../../../public/iste_logo-01-removebg-preview.webp"
                 alt="Website Logo"
-                width={240}
-                height={75}
+                className="h-[30vw] pb-5"
               />
             </div>
             <p className="text-3xl lg:mb-2 -mt-12 font-medium">ISTE NITH</p>
@@ -30,11 +28,13 @@ export const FooterTwo = () => {
                 <LinkedInIcon />
               </a>
               <a
-                href="https://www.google.com/maps/place/National+Institute+of+Technology,+Hamirpur/@31.7084291,76.5273526,17z/data=!3m1!4b1!4m6!3m5!1s0x3904d5487e12c4a1:0x395f92d3a202a7d0!8m2!3d31.7084291!4d76.5273526!16zL20vMGNybnJ4?entry=ttu&g_ep=EgoyMDI1MDMxNy4wIKXMDSoASAFQAw%3D%3D"
+                href="https://prody.istenith.com/home"
                 className="bg-white p-3 rounded-full"
                 target="_blank"
               >
-                <MapPin />
+                <div className="text-black">
+                  <Logo color={true} />
+                </div>
               </a>
               <a
                 href="https://github.com/istenith"
