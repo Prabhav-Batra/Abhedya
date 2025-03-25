@@ -11,6 +11,11 @@ export default function Mask() {
 
   useEffect(() => {
     const mask = maskRef.current;
+    gsap.set(mask, {
+      x: window.innerWidth / 2 - customCursorSize / 2,
+      y: window.innerHeight / 2 - customCursorSize / 2,
+    });
+
     gsap.to(mask, {
       width: isMobileOrTablet ? 0 : customCursorSize,
       height: isMobileOrTablet ? 0 : customCursorSize,
@@ -20,8 +25,8 @@ export default function Mask() {
 
     const handleMouseMove = (e) => {
       gsap.to(mask, {
-        x: e.clientX,
-        y: e.clientY,
+        x: e.clientX - customCursorSize / 2,
+        y: e.clientY - customCursorSize / 2,
         duration: 2.25,
         ease: "elastic.out(0.11,0.75)",
       });

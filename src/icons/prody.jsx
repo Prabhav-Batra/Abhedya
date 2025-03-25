@@ -1,7 +1,7 @@
-export const Logo = ({ color, size }) => {
+export const ProdyLogo = () => {
   return (
     <svg
-      className={` ${size ? size : "w-8 h-8"} cursor-pointer fill-black ${color ? "fill-black" : "fill-white"}`}
+      className={`cursor-pointer fill-black h-full w-full`}
       viewBox="0 0 35 50"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

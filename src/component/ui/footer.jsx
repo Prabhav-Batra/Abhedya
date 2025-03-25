@@ -43,7 +43,7 @@ export const Footer = () => {
             <div
               className="text-[#1e1e1e] lg:text-[1.15vw] text-base cursor-pointer"
               onClick={() => {
-                navigate("/home");
+                navigate("/");
               }}
             >
               Home
