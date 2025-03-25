@@ -6,12 +6,21 @@ const FloatingBlobs = () => {
 
   // Track cursor movement
   useEffect(() => {
+    let animationFrameId;
     const handleMouseMove = (e) => {
-      setMousePos({ x: e.clientX, y: e.clientY });
+      cancelAnimationFrame(animationFrameId);
+      animationFrameId = requestAnimationFrame(() => {
+        setMousePos({ x: e.clientX, y: e.clientY });
+      });
     };
+  
     window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      cancelAnimationFrame(animationFrameId);
+    };
   }, []);
+  
 
   return (
     <div className="fixed inset-0 w-full h-full z-[-1] pointer-events-none">
