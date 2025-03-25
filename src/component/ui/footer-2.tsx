@@ -3,6 +3,8 @@ import { GithubIcon } from "../../icons/github";
 import { InstagramIcon } from "../../icons/instagram";
 import { LinkedInIcon } from "../../icons/linkedIn";
 import { Logo } from "../../icons/logo";
+import { MapPin } from "../../icons/mapPin";
+import { ProdyLogo } from "../../icons/prody";
 
 export const FooterTwo = () => {
   return (
@@ -28,13 +30,11 @@ export const FooterTwo = () => {
                 <LinkedInIcon />
               </a>
               <a
-                href="https://prody.istenith.com/home"
+                href="https://www.google.com/maps/place/National+Institute+of+Technology,+Hamirpur/@31.7084291,76.5247777,17z/data=!3m1!4b1!4m6!3m5!1s0x3904d5487e12c4a1:0x395f92d3a202a7d0!8m2!3d31.7084291!4d76.5273526!16zL20vMGNybnJ4?coh=219816&entry=tts&g_ep=EgoyMDI0MDgwNS4wKgBIAVAD"
                 className="bg-white p-3 rounded-full"
                 target="_blank"
               >
-                <div className="text-black">
-                  <Logo color={true} />
-                </div>
+                <MapPin />
               </a>
               <a
                 href="https://github.com/istenith"

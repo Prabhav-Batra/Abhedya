@@ -27,7 +27,7 @@ export const Navbar = ({ navItems }) => {
         </div>
 
         <div
-          className={`fixed z-30 inset-0 md:bg-transparent bg-teal-950/30 backdrop-blur-2xl text-teal-100 flex flex-col items-center justify-center gap-6 transition-transform duration-500 ease-in-out 
+          className={`fixed z-30 inset-0 md:bg-transparent bg-teal-950/20 backdrop-blur-2xl md:backdrop-blur-none text-teal-100 flex flex-col items-center justify-center gap-6 transition-transform duration-500 ease-in-out 
           md:static md:flex md:flex-row md:gap-6 ${isNavOpen && isMobileOrTablet ? "translate-y-0" : "-translate-y-full md:translate-y-0"}`}
         >
           {isMobileOrTablet && (
